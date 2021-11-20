@@ -19,6 +19,7 @@ class BaseModels
     	unset($request['action']);
     	unset($request['tabela']);
     	unset($request['redirect']);
+        unset($request['origin']);
 
     	return $request;
     }

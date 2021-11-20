@@ -19,6 +19,7 @@ class Actions
 		$class_name = $_REQUEST['class_name'] ?? '';
 		$action     = $_REQUEST['action'] ?? '';
 
+		// VALIDA SE CLASSE EXISTE
 		$file = "{$path_root}actions/{$class_name}.php";
 		if (!file_exists($file)) {
 			echo '<pre>';
@@ -30,6 +31,7 @@ class Actions
 
 		$class_action = new $class_name();
 
+		// VALIDA SE METODOS EXISTE
 		if (!method_exists($class_action, $action)) {
 			echo '<pre>';
 			print_r('metodo n exite');

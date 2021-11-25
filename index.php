@@ -1,34 +1,6 @@
 <?php include_once 'header.php' ?>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">CentroCar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#servicos">Serviços</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#comentarios">Comentários</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#endereco">Endereço</a>
-              </li>
-            </ul>
-            <span class="navbar-text">
-              <a class="nav-link" href="login.php">Login</a>
-              
-            </span>
-          </div>
-        </div>
-      </nav>
-   
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <section>
+         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>

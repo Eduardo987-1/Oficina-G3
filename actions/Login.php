@@ -56,8 +56,11 @@ class Login extends BaseModels
 
     public function checkLogin()
     {
+        global $r_uri;
         if (!isset($_SESSION['login'])) {
-            
+            header("Location: {$r_uri}index.php");
+        }else{
+            return $_SESSION['login'];
         }
     }
 }

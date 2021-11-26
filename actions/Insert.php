@@ -83,8 +83,10 @@ class Insert extends BaseModels
                 ({$columns})
                 VALUES({$values});
             ";
-
+            $_SESSION['mensagem'] = "Agendamento feito com sucesso!";
             $result = $this->database->query($sql);
+        }else{
+            $_SESSION['mensagem_erro'] = "Falha no agendamento!";
         }
 
         header("Location: {$r_uri}{$redirect}");

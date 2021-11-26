@@ -6,9 +6,9 @@
              <br><br><br><br>
 					<h1 class="text-center">Página de Cadastro</h1>
 
-					<form action="" method="POST">
+					<form action="actions.php?class_name=Insert&action=index&tabela=usuarios&redirect=login.php" method="POST">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                            <input type="text" name="nome" class="form-control" placeholder="Username" aria-label="Username">
                         </div>
 					<div class="mb-3">
 					<input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Email">   
@@ -16,7 +16,8 @@
 					<div class="mb-3">
 					<input type="password" name="senha" class="form-control" id="exampleInputPassword1" placeholder="Senha">
 					</div>
-					<button type="submit" class="btn btn-primary">Login</button>
+                    <input type="hidden" name="origin" value="cadastro.php">
+					<button type="submit" class="btn btn-primary">Cadastrar</button>
 					</form>
 	</div>
 </div>

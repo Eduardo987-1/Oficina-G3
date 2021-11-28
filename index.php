@@ -36,6 +36,10 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+
+          <!-- ALERTS -->
+            <?php include_once 'alerts.php' ?>
+          <!-- /ALERTS -->
     <section>
       <div class="container" id="servicos">
         <div class="row">

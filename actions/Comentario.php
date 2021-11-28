@@ -39,7 +39,11 @@ class Comentario extends BaseModels
 
         $result = $this->database->query($sql);
 
-        header("Location: {$r_uri}{$redirect}");
+        $mensagens['sucesso'][] = "Registro inserido com sucesso na tabela: '{$tabela}'";
+        //$mensagens['erro'][] = "O Registro não pode inserido na tabela: '{$tabela}'";
+        $json_mensagens = json_encode($mensagens) ?? '[]';
+
+        header("Location: {$r_uri}{$redirect}?mensagens={$json_mensagens}");
         exit;
     }
 

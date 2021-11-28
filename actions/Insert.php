@@ -23,22 +23,32 @@ class Insert extends BaseModels
     	$values   = '';
     	$tabela   = $_REQUEST['tabela'] ?? '';
     	$redirect = $_REQUEST['redirect'] ?? $_REQUEST['origin'] ?? 'index.php';
+        $mensagens = [];
 
 		$params = $this->getInfoRequest($_REQUEST);
 
 		$columns = implode(',', array_keys($params));
 		$values  = '"' . implode('","', $params) . '"';
 
-    	$sql =
-    	"
-	    	INSERT INTO {$tabela}
-			({$columns})
-			VALUES({$values});
-    	";
+        try {
 
-    	$result = $this->database->query($sql);
+        	$sql =
+        	"
+    	    	INSERT INTO {$tabela}
+    			({$columns})
+    			VALUES({$values});
+        	";
 
-    	header("Location: {$r_uri}{$redirect}");
+        	$result = $this->database->query($sql);
+
+            $mensagens['sucesso'][] = "Registro inserido com sucesso na tabela: '{$tabela}'";
+        } catch (Exception $e) {
+            $mensagens['erro'][] = "O Registro não pode inserido na tabela: '{$tabela}'";
+        }
+
+        $json_mensagens = json_encode($mensagens) ?? '[]';
+
+    	header("Location: {$r_uri}{$redirect}?mensagens={$json_mensagens}");
 		exit;
     }
 
@@ -83,13 +93,16 @@ class Insert extends BaseModels
                 ({$columns})
                 VALUES({$values});
             ";
-            $_SESSION['mensagem'] = "Agendamento feito com sucesso!";
+            $mensagens['sucesso'][] = "Registro inserido com sucesso na tabela: '{$tabela}'";
+
             $result = $this->database->query($sql);
         }else{
-            $_SESSION['mensagem_erro'] = "Falha no agendamento!";
+            $mensagens['erro'][] = "O Registro não pode inserido na tabela: '{$tabela}', pois ja existe um registro semelhante!";
         }
 
-        header("Location: {$r_uri}{$redirect}");
+        $json_mensagens = json_encode($mensagens) ?? '[]';
+
+        header("Location: {$r_uri}{$redirect}?mensagens={$json_mensagens}");
         exit;
     }
 }

@@ -4,12 +4,9 @@
 	include_once 'actions/Login.php';
 	$login = new Login();
 	$resultado = $login->checkLogin();
-
-
-	/*print_r($_SESSION);
-	exit;*/
 ?>
 <br><br><br><br>
+
 <h1 class="text-center"> Serviços </h1>
 
 <h5 class="text-center">Escolha aqui o serviço que você deseja para o seu veiculo</h5>
@@ -17,9 +14,12 @@
 	<div class="row">
 	  <div style="height: 200px;" 
 			 class="col-md-6 offset-md-3">
+			<!-- ALERTS -->
+			<?php include_once 'alerts.php' ?>
+			<!-- /ALERTS -->
 		<form action="actions.php?class_name=Insert&action=insertOrError&tabela=agendamento&redirect=servico.php" method="POST">
 			Data:<div class="form-outline datepicker" data-mdb-inline="true">
-				<input type="date" class="form-control" id="exampleDatepicker2">
+				<input type="date" name="data" class="form-control" id="exampleDatepicker2">
 			  </div>
 			Serviço:
 			<select class="form-select" aria-label="Default select example" name="servico">

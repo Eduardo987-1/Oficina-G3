@@ -50,15 +50,22 @@ class Login extends BaseModels
             }
         }
 
+        $mensagens['erro'][] = "Usuario não econtrado, verifique as informações";
+
+        $json_mensagens = json_encode($mensagens) ?? '[]';
+
         // em caso de erro
-        header("Location: {$r_uri}{$origin}");
+        header("Location: {$r_uri}{$origin}?mensagens={$json_mensagens}");
     }
 
     public function checkLogin()
     {
         global $r_uri;
         if (!isset($_SESSION['login'])) {
-            header("Location: {$r_uri}index.php");
+            $mensagens['erro'][] = "Você precisa estar logado para acessar algumas telas do sistema";
+
+            $json_mensagens = json_encode($mensagens) ?? '[]';
+            header("Location: {$r_uri}index.php?mensagens={$json_mensagens}");
         }else{
             return $_SESSION['login'];
         }

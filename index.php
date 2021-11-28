@@ -1,4 +1,10 @@
 <?php include_once 'header.php' ?>
+
+<?php 
+  include_once 'actions/Comentario.php';
+  $comentario = new Comentario();
+  $resultado = $comentario->getComentario();
+ ?>
           <section>
          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -94,7 +100,20 @@
        <div class="container" id="comentarios">
         <div class="row">
           <h1 class="text-center"><strong>Comentários</strong></h1>
-        
+          <form action="actions.php?class_name=Comentario&action=index&tabela=comentario&redirect=index.php" method="POST"> 
+            Nome: <input type="text" name="nome">
+            Comentário: <input type="textarea" name="comentario">
+            <input type="hidden" name="data" value="<?= date("Y-m-d H:i:s");  ?>">
+            <button type="submit">Enviar</button>
+          </form>
+          <?php foreach ($resultado as $key => $value): ?>
+            <ul>
+              <li><?= $value['nome']; ?></li>
+              <li><?= $value['comentario']; ?></li>
+              <li><?= $value['data']; ?></li>
+            </ul>
+           
+          <?php endforeach; ?>
         </div>
         </div>
        </section>

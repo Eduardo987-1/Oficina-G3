@@ -98,22 +98,34 @@
         </div>
         </div>
        </section>
-       <section style="height: 5vh;">
+       <section>
          <!--Endereço-->
          <div class="container" id="endereco">
           <div class="row">
-            <h1 class="text-center"><strong>Endereço</strong></h1>
+            <h1 class="text-center"><strong>Contato</strong></h1>
+            <br>
             <div class="col">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.1990545136678!2d-38.57710688592992!3d-3.7668161444221475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74c01797285bb%3A0xa8888be05f940563!2sCentro%20Universit%C3%A1rio%20Est%C3%A1cio%20-%20Campus%20Parangaba!5e0!3m2!1spt-BR!2sbr!4v1636395402645!5m2!1spt-BR!2sbr" 
-              width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              width="460" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="col">
-              <img src="https://img.icons8.com/wired/40/000000/map.png"/>Centro Universitário Estácio - Campus Parangaba
-              <img src="https://img.icons8.com/ios/32/000000/phone.png"/>0800 880 6767
-              <img src="https://img.icons8.com/dotty/49/000000/mail-contact.png"/> teste@estacio.com.br
+            <form class="row g-3">
+  <div class="col-12">
+    <label for="inputEmail4" class="form-label">Nome Completo</label>
+    <input type="text" class="form-control" id="nomecontato" name="nomecontato">
+  </div>
+  <label class="form-label">Mensagem</label>
+  <div class="form-floating">
+ <textarea class="form-control" id="mensagem" style="height: 100px"></textarea>
+ 
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+</form>  
             </div>
          </div>
           </div>
        </section>
-    
+       
 <?php include_once 'footer.php' ?>

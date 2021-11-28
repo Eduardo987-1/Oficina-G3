@@ -19,6 +19,7 @@
 					<p>Você precisa estar cadastrado para fazer login caso você não seja cadastrado clique <a href="cadastro.php">Aqui</a></p></div>
 	</div>
 </div>
+<br><br><br><br><br><br><br><br><br><br>
 
 		
 		   

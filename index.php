@@ -127,5 +127,27 @@
          </div>
           </div>
        </section>
+       <br><br>
+       <section id="grupo">
+        <div class="container">
+          <h1 class="text-center"><strong>Equipe</strong></h1>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="text-center">
+                <img src="jonas2.jpg" class="rounded" alt="..." width="300" height="300">
+                <h4 class="text-center">Carlos Jonas</h4>
+              </div>
+              
+              </div>
+            <div class="col">
+              <div class="text-center">
+                <img src="edu.jpg" class="rounded" alt="..." width="300" height="300">
+                <h4 class="text-center">Eduardo Sousa</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+       </section>
        
 <?php include_once 'footer.php' ?>

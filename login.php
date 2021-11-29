@@ -13,7 +13,7 @@
 
 			<h1 class="text-center">Página de login</h1>
 
-			<form action="actions.php?class_name=Login&action=index&tabela=usuarios&redirect=index.php" method="POST">
+			<form action="actions.php?class_name=Login&action=index&tabela=usuarios&redirect=servico.php" method="POST">
 			<div class="mb-3">
 			<input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Email">
 			</div>

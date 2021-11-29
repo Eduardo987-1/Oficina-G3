@@ -11,7 +11,7 @@
 
 					<form action="actions.php?class_name=Insert&action=index&tabela=usuarios&redirect=login.php" method="POST">
                         <div class="mb-3">
-                            <input type="text" name="nome" class="form-control" placeholder="Username" aria-label="Username">
+                            <input type="text" name="nome" class="form-control" placeholder="Nome completo" aria-label="Nome completo">
                         </div>
 					<div class="mb-3">
 					<input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Email">

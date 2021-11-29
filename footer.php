@@ -1,10 +1,9 @@
 <section style="margin-top: 50px;">
     <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+<footer class="text-center text-lg-start bg-dark text-muted">
   <!-- Section: Social media -->
   <section
-    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-  >
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" style="color: white;">
     <!-- Left -->
     <div class="me-5 d-none d-lg-block">
       <span>Conecte-se conosco nas redes sociais:</span>
@@ -12,27 +11,22 @@
     <!-- Left -->
     <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
     <!-- Facebook -->
-<a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button"
+<a class="btn btn-primary" style="background-color: #3b5998;" href="https://www.facebook.com/br.estacio/"  target="_blank" role="button"
 ><i class="fab fa-facebook-f"></i
 ></a>
 
 <!-- Twitter -->
-<a class="btn btn-primary" style="background-color: #55acee;" href="#!" role="button"
+<a class="btn btn-primary" style="background-color: #55acee;" href="https://twitter.com/EstacioCG" target="_blank" role="button"
 ><i class="fab fa-twitter"></i
 ></a>
 
-<!-- Google -->
-<a class="btn btn-primary" style="background-color: #dd4b39;" href="#!" role="button"
-><i class="fab fa-google"></i
-></a>
-
 <!-- Instagram -->
-<a class="btn btn-primary" style="background-color: #ac2bac;" href="#!" role="button"
+<a class="btn btn-primary" style="background-color: #ac2bac;" href="https://www.instagram.com/estacio_brasil/"  target="_blank" role="button"
 ><i class="fab fa-instagram"></i
 ></a>
 
 <!-- Whatsapp -->
-<a class="btn btn-primary" style="background-color: #25d366;" href="#!" role="button"
+<a class="btn btn-primary" style="background-color: #25d366;" href="https://api.whatsapp.com/send?phone=5511945745714&text=Ol%C3%A1" target="_blank"  role="button"
 ><i class="fab fa-whatsapp"></i
 ></a>
 
@@ -45,7 +39,7 @@
   <!-- Section: Social media -->
 
   <!-- Section: Links  -->
-  <section class="">
+  <section class="" style="color: white;">
     <div class="container text-center text-md-start mt-5">
       <!-- Grid row -->
       <div class="row mt-3">
@@ -56,8 +50,7 @@
             <i class="fas fa-gem me-3"></i>Oficina G3
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+           Aqui você encontra o melhor atendimento do mercado com relação ao seu veiculo.Profissionais altamente qualificados prontos para lhe atender da melhor forma.
           </p>
         </div>
         <!-- Grid column -->
@@ -106,7 +99,7 @@
   <!-- Section: Links  -->
 
   <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);color: white;">
     © 2021 Copyright:
     <a class="text-reset fw-bold" href="index.php">oficinag3.com</a>
   </div>

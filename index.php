@@ -15,15 +15,15 @@
               <div class="carousel-item active">
                 <img src="https://www.mte-thomson.com.br/wp-content/uploads/2021/07/Manutencao_Preventiva-2.jpg" class="d-block w-100" style="object-fit: cover;" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
+                  <h5>Oficina especializada</h5>
+                  <p>Agende serviços de reparação automotiva com segurança e qualidade.
+Afinal, o seu carro merece ser cuidado por profissionais qualificados e recomendados!</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="https://www.industriahoje.com.br/wp-content/uploads/2016/06/manuten%C3%A7%C3%A3o-de-moto.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
+                  <h5>Contamos com uma equipe altamente qualificada e equipamentos de ponta para cuidar dos reparos do seu veículo.</h5>
                 </div>
               </div>
             </div>
@@ -52,9 +52,9 @@
                     
                     <div class="card-body text-center">
                         <h5 class="card-title">Troca de Óleo</h5>
-                        <p class="card-text">Batman originated from an incident in Bruce's childhood; after witnessing the murder of his parents.</p>
+                        <p class="card-text">A viscosidade do óleo evita o atrito entre as peças, sem o desgaste no sistema mecânico.</p><br>
                         
-                        <a href="#" class="btn btn-primary">Clique aqui</a>
+                        <a href="login.php" class="btn btn-primary">Clique aqui</a>
                     </div>
                 </div>
             </div>
@@ -64,9 +64,9 @@
                   
                   <div class="card-body text-center">
                       <h5 class="card-title">Alinhamento</h5>
-                      <p class="card-text">Batman originated from an incident in Bruce's childhood; after witnessing the murder of his parents.</p>
+                      <p class="card-text">A falta de alinhamento, ou o alinhamento parcial causa desgaste irregular dos pneus e deixam o volante torto.</p>
                       
-                      <a href="#" class="btn btn-primary">Clique aqui</a>
+                      <a href="login.php" class="btn btn-primary">Clique aqui</a>
                   </div>
               </div>
           </div>
@@ -76,9 +76,9 @@
                 
                 <div class="card-body text-center">
                     <h5 class="card-title">Serviços Gerais</h5>
-                    <p class="card-text">Batman originated from an incident in Bruce's childhood; after witnessing the murder of his parents.</p>
+                    <p class="card-text">A manutenção preventiva do veículo diminui os riscos de ficar parado, quebrado no trânsito ou na estrada.</p>
                     
-                    <a href="#" class="btn btn-primary">Clique aqui</a>
+                    <a href="login.php" class="btn btn-primary">Clique aqui</a>
                 </div>
             </div>
         </div>
@@ -88,9 +88,9 @@
               
               <div class="card-body text-center">
                   <h5 class="card-title">Pintura Funilaria</h5>
-                  <p class="card-text">Batman originated from an incident in Bruce's childhood; after witnessing the murder of his parents.</p>
+                  <p class="card-text">A oficina de funilaria e pintura conta com uma ampla estrutura para atender as demandas com rapidez e competência.</p>
                   
-                  <a href="#" class="btn btn-primary">Clique aqui</a>
+                  <a href="login.php" class="btn btn-primary">Clique aqui</a>
               </div>
           </div>
       </div>
@@ -99,53 +99,54 @@
       
      </section>
      <br>
-     <section style="height: 50vh;">
+     <section style="height: 70vh;" id="comentarios">
        <!--COMENTARIOS AQUI-->
-       <div class="container" id="comentarios">
+       <div class="container" >
         <div class="row">
           <h1 class="text-center"><strong>Comentários</strong></h1>
-          <form action="actions.php?class_name=Comentario&action=index&tabela=comentario&redirect=index.php" method="POST"> 
-            Nome: <input type="text" name="nome">
-            Comentário: <input type="textarea" name="comentario">
+          <div class="col">
+            <form action="actions.php?class_name=Comentario&action=index&tabela=comentario&redirect=index.php" method="POST"> 
+            Nome: <input type="text" name="nome" class="form-control" placeholder="Nome completo">
+            Comentário:<input type="text" name="comentario" class="form-control" placeholder="Seu comentário">
             <input type="hidden" name="data" value="<?= date("Y-m-d H:i:s");  ?>">
-            <button type="submit">Enviar</button>
+            <br>
+            <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
+        </div>
+        <div class="col">
           <?php foreach ($resultado as $key => $value): ?>
-            <ul>
-              <li><?= $value['nome']; ?></li>
-              <li><?= $value['comentario']; ?></li>
-              <li><?= $value['data']; ?></li>
-            </ul>
-           
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1"><?= $value['nome']; ?></h5>
+                  <small><?= $value['data']; ?></small>
+                </div>
+                <p class="mb-1"><?= $value['comentario']; ?></p>
+              </a>
           <?php endforeach; ?>
         </div>
+        </div>
+          
+          
         </div>
        </section>
        <section>
          <!--Endereço-->
          <div class="container" id="endereco">
           <div class="row">
-            <h1 class="text-center"><strong>Contato</strong></h1>
+            <h1 class="text-center"><strong>Endereço</strong></h1>
             <br>
             <div class="col">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.1990545136678!2d-38.57710688592992!3d-3.7668161444221475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74c01797285bb%3A0xa8888be05f940563!2sCentro%20Universit%C3%A1rio%20Est%C3%A1cio%20-%20Campus%20Parangaba!5e0!3m2!1spt-BR!2sbr!4v1636395402645!5m2!1spt-BR!2sbr" 
               width="460" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="col">
-            <form class="row g-3">
-  <div class="col-12">
-    <label for="inputEmail4" class="form-label">Nome Completo</label>
-    <input type="text" class="form-control" id="nomecontato" name="nomecontato">
-  </div>
-  <label class="form-label">Mensagem</label>
-  <div class="form-floating">
- <textarea class="form-control" id="mensagem" style="height: 100px"></textarea>
- 
-  </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </div>
-</form>  
+          <p style="font-size: 19px;"><i class="fas fa-home me-3"></i>Av. Senador Fernandes Távora, 137 - Jóquei Clube, Fortaleza - CE, 60510-111</p>
+          <p style="font-size: 19px;" >
+            <i class="fas fa-envelope me-3"></i>
+            estacio@estacio.com.br
+          </p>
+          <p style="font-size: 19px;"><i class="fas fa-phone me-3"></i>0800 880 6767</p>
             </div>
          </div>
           </div>
@@ -155,13 +156,18 @@
         <div class="container">
           <h1 class="text-center"><strong>Equipe</strong></h1>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col">
               <div class="text-center">
                 <img src="jonas2.jpg" class="rounded" alt="..." width="300" height="300">
                 <h4 class="text-center">Carlos Jonas</h4>
               </div>
-              
               </div>
+            <div class="col">
+              <div class="text-center">
+                <img src="milton.jpg" class="rounded" alt="..." width="300" height="300">
+                <h4 class="text-center">Milton Paiva</h4>
+              </div>
+            </div>
             <div class="col">
               <div class="text-center">
                 <img src="edu.jpg" class="rounded" alt="..." width="300" height="300">

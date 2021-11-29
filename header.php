@@ -9,29 +9,29 @@
     <title>Oficina</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark  fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.php">Oficina G3</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarText">
+          <div class="collapse navbar-collapse" id="navbarText" >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.php">Home</a>
+                <a class="nav-link" aria-current="page" href="index.php" style="color: white;">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#servicos">Serviços</a>
+                <a class="nav-link" href="#servicos" style="color: white;">Serviços</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#comentarios">Comentários</a>
+                <a class="nav-link" href="#comentarios" style="color: white;">Comentários</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#endereco">Endereço</a>
+                <a class="nav-link" href="#endereco" style="color: white;">Endereço</a>
               </li>
             </ul>
             <span class="navbar-text">
-              <a class="nav-link" href="login.php">Login</a>
+              <a class="nav-link" href="login.php" style="color: white;">Login</a>
               
             </span>
           </div>
